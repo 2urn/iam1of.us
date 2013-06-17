@@ -9,7 +9,7 @@
   <title>iam1of.us</title>
 
   <link rel="stylesheet" href="stylesheets/normalize.css" />
-  
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="stylesheets/app.css" />
   
 
@@ -317,22 +317,28 @@
 	
 
 
- <script src ="javascripts/vendor/jquery.js"></script>
+ <script src="javascripts/vendor/jquery.js"></script>
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
  <script>
  	jQuery(document).ready(function($){
 
+ 	var bgColor = ['#E67E22','#F1C40F','#1ABC9C','#2ECC71','#3498DB','#9B59B6','#34495E']
  	// The following code block creates the basic user
  	// Experience so that users only see one question at a time
  	// This will be switched to a cooler jQuery plugin in the future
  		$('#start').click(function(){
  			$('header').slideUp('slow', function(){
  				$('section').eq(0).fadeIn();
+ 				$('body').css({'background': bgColor[0]})
  			});
  		})
  		$('section .large.button.right').click(function(){
  			var currentSlide = $(this).parents('section').index();
  			$(this).parents('section').fadeOut('slow',function (){
  				$('section').eq(currentSlide).fadeIn('fast');
+ 				// Also change the color based on the bgColor array
+ 				$('body').css({'background': bgColor[currentSlide]})
+
  			})
  		})
  	})

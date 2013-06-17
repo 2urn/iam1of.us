@@ -43,6 +43,10 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+html, body {
+	height:100%;
+}
+
 section {
 	display: none;
 }
