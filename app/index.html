@@ -22,6 +22,7 @@
 			<div class="large-12 columns">
 				<h1 class="logo">iam1of.us</h1>
 				<p>Version: 0.0.1 beta</p>
+
 			</div>
 		</div>
 		
@@ -36,10 +37,8 @@
 		<div class="row">			
 	</header>
 			<section class="row">
-				<div class="large-2 columns">
-					<div class="panel button large">
-						<p>1 of 7</p>
-					</div>
+				<div class="large-12 columns">
+					<h3>1 of 7</h3>
 				</div>
 
 				<div class="large-10 columns">
@@ -50,16 +49,14 @@
 				</div>
 				
 				<div class="large-2 columns">
-						<p><a href="#" class="large button right">Next</a></p>
+						<p><a href="#" class="large button right">Next<span class="entypo">&#59238;</span></a></p>
 				</div>
 			</section>
 			
 			
 			<section class="row">
-				<div class="large-2 columns">
-					<div class="panel button large">
-						<p>2 of 7</p>
-					</div>
+				<div class="large-12 columns">
+					<h3>2 of 7</h3>
 				</div>
 				<div class="large-10 columns">
 					<div class="panel">
@@ -95,17 +92,15 @@
 				
 
 				<div class="large-2 columns">
-								<p><a href="#" class="large button right">Next</a></p>
+								<p><a href="#" class="large button right">Next<span class="entypo">&#59238;</span></a></p>
 
 				</div>
 			</section>
 			
 			
 			<section class="row">
-				<div class="large-2 columns">
-					<div class="panel button large">
-						<p>3 of 7</p>
-					</div>
+				<div class="large-12 columns">
+					<h3>3 of 7</h3>
 				</div>
 				<div class="large-10 columns">
 					<div class="panel">
@@ -135,7 +130,7 @@
 				</div>
 				
 				<div class="large-2 columns">
-								<p><a href="#" class="large button right">Next</a></p>
+								<p><a href="#" class="large button right">Next<span class="entypo">&#59238;</span></a></p>
 
 				</div>		
 					
@@ -146,10 +141,8 @@
 			
 	
 			<section class="row">
-				<div class="large-2 columns">
-					<div class="panel button large">
-						<p>4 of 7</p>
-					</div>
+				<div class="large-12 columns">
+					<h3>4 of 7</h3>
 				</div>
 				<div class="large-10 columns">
 					<div class="panel">
@@ -158,7 +151,7 @@
 				</div>
 				
 				<div class="large-2 columns">
-						<p><a href="#" class="large button right">Next</a></p>
+						<p><a href="#" class="large button right">Next<span class="entypo">&#59238;</span></a></p>
 
 	
 				</div>
@@ -169,10 +162,8 @@
 
 			
 			<section class="row">
-				<div class="large-2 columns">
-					<div class="panel button large">
-						<p>5 of 7</p>
-					</div>
+				<div class="large-12 columns">
+					<h3>5 of 7</h3>
 				</div>
 				<div class="large-10 columns">
 					<div class="panel">
@@ -199,7 +190,7 @@
 				</div>
 				
 				<div class="large-2 columns">
-						<p><a href="#" class="large button right">Next</a></p>
+						<p><a href="#" class="large button right">Next<span class="entypo">&#59238;</span></a></p>
 				</div>
 			</section>
 			
@@ -209,10 +200,8 @@
 			
 			
 			<section class="row">
-				<div class="large-2 columns">
-					<div class="panel button large">
-						<p>6 of 7</p>
-					</div>
+				<div class="large-12 columns">
+					<h3>6 of 7</h3>
 				</div>
 				<div class="large-10 columns">
 					<div class="panel">
@@ -239,17 +228,16 @@
 				</div>
 				
 				<div class="large-2 columns">
-						<p><a href="#" class="large button right">Next</a></p>
+						<p><a href="#" class="large button right">Next<span class="entypo">&#59238;</span></a></p>
 				</div>
 			</section>
 			
 					
 					
 			<section class="row">
-					<div class="large-2 columns">
-						<div class="panel button large">
-							<p>7 of 7</p>
-						</div>
+					<div class="large-12 columns">
+						<h3>
+7 of 7	</h3>
 					</div>
 					<div class="large-10 columns">
 						<div class="panel">
@@ -317,8 +305,8 @@
 	
 
 
- <script src="javascripts/vendor/jquery.js"></script>
- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
  <script>
  	jQuery(document).ready(function($){
 
@@ -334,10 +322,12 @@
  		})
  		$('section .large.button.right').click(function(){
  			var currentSlide = $(this).parents('section').index();
+ 			// Also change the color based on the bgColor array
+ 			$('body').animate({backgroundColor: bgColor[currentSlide]}, 500)
+ 			
  			$(this).parents('section').fadeOut('slow',function (){
  				$('section').eq(currentSlide).fadeIn('fast');
- 				// Also change the color based on the bgColor array
- 				$('body').css({'background': bgColor[currentSlide]})
+ 				
 
  			})
  		})

@@ -6248,12 +6248,33 @@ a.th {
   max-width: 800px;
 }
 
-/* line 46, ../sass/app.scss */
+@font-face {
+  font-family: 'entypo';
+  src: url("./entypo/entypo.eot");
+  /* IE9 Compat Modes */
+  src: url("./entypo/entypo.eot?#iefix") format("embedded-opentype"), url("./entypo/entypo.woff") format("woff"), url("./entypo/entypo.ttf") format("truetype"), url("./entypo/entypo.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+
+/* line 55, ../sass/app.scss */
 html, body {
   height: 100%;
 }
 
-/* line 50, ../sass/app.scss */
+/* line 59, ../sass/app.scss */
 section {
   display: none;
+}
+
+/* line 63, ../sass/app.scss */
+.entypo {
+  font-family: "entypo";
+}
+
+/* line 67, ../sass/app.scss */
+section .large.button.right .entypo {
+  font-size: 29px;
+  margin-left: 6px;
+  position: relative;
+  top: 1px;
 }
