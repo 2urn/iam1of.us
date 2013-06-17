@@ -43,7 +43,7 @@
 
 				<div class="large-10 columns">
 					<div class="panel">
-						<p>My name is: <input type="text" id="" name="" size="5" required="" value="" class="" aria-required="true"></p>
+						<p>My name is: <input type="text" id="" name="" placeholder="Areal Person" required="" value="" class="" aria-required="true"></p>
 						
 					</div>
 				</div>
@@ -324,7 +324,7 @@
  			var currentSlide = $(this).parents('section').index();
  			// Also change the color based on the bgColor array
  			$('body').animate({backgroundColor: bgColor[currentSlide]}, 500)
- 			
+
  			$(this).parents('section').fadeOut('slow',function (){
  				$('section').eq(currentSlide).fadeIn('fast');
  				

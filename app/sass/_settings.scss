@@ -243,14 +243,14 @@ $em-base: 16px !default;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: emCalc(14px);
-// $input-bg-color: #fff;
-// $input-focus-bg-color: darken(#fff, 2%);
+ $input-bg-color: transparent;
+ $input-focus-bg-color: transparent;
 // $input-border-color: darken(#fff, 20%);
 // $input-focus-border-color: darken(#fff, 40%);
-// $input-border-style: solid;
-// $input-border-width: 1px;
+ $input-border-style: none;
+ $input-border-width: 0px;
 // $input-disabled-bg: #ddd;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+ $input-box-shadow: none;
 
 //// Fieldset border and spacing.
 

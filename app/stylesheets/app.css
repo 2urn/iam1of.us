@@ -2291,7 +2291,7 @@ label.right {
 /* line 266, ../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_forms.scss */
 label.inline {
   margin: 0 0 1em 0;
-  padding: 0.625em 0;
+  padding: 0.5em 0;
 }
 
 /* Attach elements to the beginning or end of an input */
@@ -2475,11 +2475,11 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
-  background-color: white;
+  background-color: transparent;
   font-family: inherit;
-  border: 1px solid #cccccc;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 0px none #cccccc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-size: 0.875em;
@@ -2529,7 +2529,7 @@ input[type="tel"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-  background: #fafafa;
+  background: transparent;
   border-color: #999999;
   outline: none;
 }
@@ -2596,7 +2596,7 @@ textarea.error {
 input.error:focus,
 .error textarea:focus,
 textarea.error:focus {
-  background: #fafafa;
+  background: transparent;
   border-color: #999999;
 }
 
@@ -2819,7 +2819,7 @@ form.custom .custom.dropdown ul {
   width: auto;
   display: none;
   margin: 0;
-  left: -1px;
+  left: 0px;
   top: auto;
   -webkit-box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);
@@ -6277,4 +6277,24 @@ section .large.button.right .entypo {
   margin-left: 6px;
   position: relative;
   top: 1px;
+}
+
+/* line 88, ../sass/app.scss */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  border-bottom: 1px solid #c0c0c0 !important;
+  width: auto;
+  display: inline;
 }
