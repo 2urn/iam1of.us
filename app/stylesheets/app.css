@@ -6247,3 +6247,8 @@ a.th {
 .f-dropdown.large {
   max-width: 800px;
 }
+
+/* line 46, ../sass/app.scss */
+section {
+  display: none;
+}
