@@ -10,6 +10,9 @@
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/typekit.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<!-- Scripts for iCheck -->
+		<link rel="stylesheet" href="css/iCheck-skins/square/red.css">
+		<script src= "js/jquery.icheck.min.js"></script>
 	</head>
 	<body>
 		<select id="state" hidden></select>
@@ -73,6 +76,15 @@
 				    $('#console').html(log).hide().fadeIn();
 				  });
 				});
+		</script>
+		<script>
+		$(document).ready(function(){
+		  $('#race input').iCheck({
+		    checkboxClass: 'icheckbox_square-red',
+		    radioClass: 'iradio_square-red',
+		    increaseArea: '20%' // optional
+		  });
+		});
 		</script>
 	</body>
 </html>

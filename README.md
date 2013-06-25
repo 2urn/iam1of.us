@@ -24,4 +24,5 @@
 <h4>Using the following plugins</h4>
 <ul>
 	<li>Switchy (https://github.com/lou/switchy)</li>
+	<li>iCheck (http://damirfoy.com/iCheck/#features)</li>
 </ul>

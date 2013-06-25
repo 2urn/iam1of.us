@@ -22,7 +22,7 @@ $(document).ready(function() {
     function getUserData() {
 
         var $userGender = $('#gender').val(),
-            $userRace = $('input:checked', '#race').val(),
+            $userRace = $('#race .iradio_square-red.checked input').val(),
             $userAge,
             userAgeStr,
             $userAgeCode;
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
         $.getJSON(censusAPI + 'PCT012' + $userRace + $userGender + $userAge + '&for=zip+code+tabulation+area:' + returnUserPostal() +'&in=state:' + returnUserState(), function(data) {
 
-            $resultUser.html('<span>I am one of</span>' + '<div class="count">' + data[1][0] + '</div>' + $('#age').val() + ' ' + 'year old, ' + $('input:checked', '#race').attr('name') + ', ' + ' ' + $('#gender option:selected').text() + 's</span>');
+            $resultUser.html('<span>I am one of</span>' + '<div class="count">' + data[1][0] + '</div>' + $('#age').val() + ' ' + 'year old, ' + $('#race .iradio_square-red.checked input').attr('name') + ', ' + ' ' + $('#gender option:selected').text() + 's</span>');
 
         });
 
