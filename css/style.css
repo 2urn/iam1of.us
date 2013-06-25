@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 100%;
+}
+body {
+	font-family: sans-serif;
+}
+fieldset {
+	padding: 2rem;
+	background-color: #40dfcb;
+	border: 0;
+}
+input, select, button {
+	line-height: 28px;
+	border: 1px solid #aaa;
+}
+input, select{
+	width: 100%;
+	margin-right: 1rem;
+}
+input, button {
+	padding: 0 1rem;
+}
+select {
+	display: inline-block;
+	height: 28px;
+	color: #555;
+}
+button {
+	border-radius: 2px;
+	background-image: -webkit-linear-gradient(top, #444, #111);
+	color: white;
+}
+
+#resultUser, #resultTotalPop {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.count {
+	font-family: "ff-good-headline-web-pro-con", sans-serif;
+	font-weight: 900;
+}
+
+#resultUser,
+#resultTotalPop {
+	padding: 3rem 0;
+}
+
+#resultUser {
+	background-color: #f46;
+
+}
+#resultTotalPop {
+	background-color: #d5c728;
+
+}
+#resultUser .count,
+#resultTotalPop .count {
+	color: white;
+}
+#resultUser .count {
+	font-size: 10rem;
+	line-height: 10rem;
+}
+#resultTotalPop .count {
+	font-size: 4rem;
+	line-height: 4rem;
+}
+#state, #zipCode {
+	display: none;
+}
+
+
+@media screen and (min-width: 1025px) {
+
+	input, select{
+		width: 25%;
+	}
+
+}

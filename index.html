@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<title>IAm1Of.Us</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwf1FckDuERqHYbtFtHK0_bIWiNV_f5y4&sensor=true"></script>
+		<script type="text/javascript" src="js/geo.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/typekit.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		
+	</head>
+
+	<body>
+		<select id="state" hidden></select>
+		<input type="text" id="zipCode" value="" hidden>
+		<fieldset>
+			<label for="age">Age</label> <input type="text" id="age" value="">
+			<select id="gender">
+				<option name="male" value="0">Male</option>
+				<option name="female" value="1">Female</option>
+			</select>
+			<select id="race">
+				<option name="white" value="A">White</option>
+				<option name="black" value="B">Black or African American</option>
+				<option name="native" value="C">American Indian or Alaskan Native</option>
+				<option name="hispanicAll" value="D">Asian</option>
+				<option name="hispanicAll" value="E">Native Hawaiian or Pacific Islander</option>
+				<option name="hispanicAll" value="H">Hispanic</option>
+				<option name="hispanicAll" value="F">Other</option>
+			</select>
+			<button>Submit</button>
+		</fieldset>
+		<section>
+			<div id="resultUser"></div>
+		</section>
+		<section>
+			<div id="resultTotalPop"></div>
+		</section>
+	</body>
+</html>
+
