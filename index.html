@@ -3,7 +3,6 @@
 	<head>
 
 	<title>IAm1Of.Us</title>
-
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwf1FckDuERqHYbtFtHK0_bIWiNV_f5y4&sensor=true"></script>
@@ -11,18 +10,19 @@
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/typekit.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		
 	</head>
-
 	<body>
 		<select id="state" hidden></select>
 		<input type="text" id="zipCode" value="" hidden>
 		<fieldset>
 			<label for="age">Age</label> <input type="text" id="age" value="">
-			<select id="gender">
+			<img src='img/female.png' class='gender' gender='female' />
+			<img src='img/male.png' class='gender' gender='male' />
+			<select id='gender'>
 				<option name="male" value="0">Male</option>
+				<option value='' selected="selected"></option>
 				<option name="female" value="1">Female</option>
-			</select>
+          	</select>
 			<select id="race">
 				<option name="white" value="A">White</option>
 				<option name="black" value="B">Black or African American</option>
@@ -40,6 +40,40 @@
 		<section>
 			<div id="resultTotalPop"></div>
 		</section>
+
+		<!-- Following scripts are for switchy plugin for male/female switch -->
+		<script type="text/javascript" src="js/switchy.js"></script>
+		<script type="text/javascript" src="js/jquery.animate-color.js"></script>
+		<script type="text/javascript" src="js/jquery.event.drag.js"></script>
+		<script>
+			$(function() {
+				  $('#gender').switchy();
+
+				  $('.gender').on('click', function(){
+				    $('#gender').val($(this).attr('gender')).change();
+				  });
+
+				  $('#gender').on('change', function(){
+				    
+				    // Animate Switchy Bar background color
+				    var bgColor = '#ccb3dc';
+
+				    if ($(this).val() == '1'){
+				      bgColor = '#ed7ab0';
+				    } else if ($(this).val() == '0'){
+				      bgColor = '#7fcbea';
+				    }
+
+				    $('.switchy-bar').animate({
+				      backgroundColor: bgColor
+				    });
+
+				    // Display action in console
+				    var log =  'Selected value is "'+$(this).val()+'"';
+				    $('#console').html(log).hide().fadeIn();
+				  });
+				});
+		</script>
 	</body>
 </html>
 
