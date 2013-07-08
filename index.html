@@ -3,7 +3,7 @@
 	<head>
 
 	<title>IAm1Of.Us</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwf1FckDuERqHYbtFtHK0_bIWiNV_f5y4&sensor=true"></script>
 		<script type="text/javascript" src="js/geo.js"></script>
@@ -15,34 +15,45 @@
 		<script src= "js/jquery.icheck.min.js"></script>
 	</head>
 	<body>
+
 		<select id="state" hidden></select>
 		<input type="text" id="zipCode" value="" hidden>
-		<fieldset>
-			<label for="age">Age</label> <input type="text" id="age" value="">
-			<img src='img/female.png' class='gender' gender='female' />
-			<img src='img/male.png' class='gender' gender='male' />
-			<select id='gender'>
-				<option name="male" value="0">Male</option>
-				<option value='' selected="selected"></option>
-				<option name="female" value="1">Female</option>
-          	</select>
-			<div id="race">
-				<input type="radio" name="White" value="A">White
-				<input type="radio" name="Black" value="B">Black or African American
-				<input type="radio" name="American Indian or Alaskan Native" value="C">American Indian or Alaskan Native
-				<input type="radio" name="Asian" value="D">Asian
-				<input type="radio" name="Native Hawaiian or Pacific Islander" value="E">Native Hawaiian or Pacific Islander
-				<input type="radio" name="Hispanic" value="H">Hispanic
-				<input type="radio" name="Other" value="F">Other
-			</div>
-			<button>Submit</button>
-		</fieldset>
-		<section>
-			<div id="resultUser"></div>
-		</section>
-		<section>
-			<div id="resultTotalPop"></div>
-		</section>
+		<div class="topbg">
+			<section class="row">
+				<fieldset class="large-6 small-centered small-12 columns">
+					<input type="text" id="age" value="" placeholder="What is your age you attractive person you?">
+					<div class="bathroom">
+						<img src='img/male.png' class='gender' gender='male' />
+						<img src='img/female.png' class='gender' gender='female' />
+					</div>
+					<select id='gender'>
+						<option name="male" value="0">Male</option>
+						<option value='' selected="selected"></option>
+						<option name="female" value="1">Female</option>
+		          	</select>
+					<div id="race">
+						<span><input type="radio" name="White" value="A"><label>White</label></span>
+						<span><input type="radio" name="Black" value="B"><label>Black or African American</label></span>
+						<span><input type="radio" name="American Indian or Alaskan Native" value="C"><label>American Indian or Alaskan Native</label></span>
+						<span><input type="radio" name="Asian" value="D"><label>Asian</label></span>
+						<span><input type="radio" name="Native Hawaiian or Pacific Islander" value="E"><label>Native Hawaiian or Pacific Islander</label></span>
+						<span><input type="radio" name="Hispanic" value="H"><label>Hispanic</label></span>
+						<span><input type="radio" name="Other" value="F"><label>Other</label></span>
+					</div>
+					<button>Submit</button>
+				</fieldset>
+			</section>
+		</div>
+		<div class="middlebg">
+			<section class="row">
+				<div id="resultUser"></div>
+			</section class="row">			
+		</div>
+		<div class="bottombg">
+			<section class="row">
+				<div id="resultTotalPop"></div>
+			</section>
+		</div>
 
 		<!-- Following scripts are for switchy plugin for male/female switch -->
 		<script type="text/javascript" src="js/switchy.js"></script>
