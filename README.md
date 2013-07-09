@@ -26,3 +26,5 @@
 	<li>Switchy (https://github.com/lou/switchy)</li>
 	<li>iCheck (http://damirfoy.com/iCheck/#features)</li>
 </ul>
+
+Reference for Google Maps URL http://moz.com/ugc/everything-you-never-wanted-to-know-about-google-maps-parameters

@@ -21,7 +21,8 @@
 		<div class="topbg">
 			<section class="row">
 				<fieldset class="large-6 small-centered small-12 columns">
-					<input type="text" id="age" value="" placeholder="What is your age you attractive person you?">
+					<h1>I am...</h1>
+					<input type="text" id="age" value="" placeholder="years old">
 					<div class="bathroom">
 						<img src='img/male.png' class='gender' gender='male' />
 						<img src='img/female.png' class='gender' gender='female' />
@@ -95,6 +96,18 @@
 		    radioClass: 'iradio_square-red',
 		    increaseArea: '20%' // optional
 		  });
+		  // Make it so users can only check one box
+		  $('#race .iCheck-helper').click(function(){
+		  		$('#race .iradio_square-red').removeClass('checked');
+		  		$(this).parent().addClass('checked');
+		  })
+
+		  // Expand result divs on click of submit
+		  $('.topbg button').click(function(){
+		  	$('.middlebg').slideDown('fast',function(){
+		  		$('.bottombg').slideDown('fast')
+		  	})
+		  })
 		});
 		</script>
 	</body>

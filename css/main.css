@@ -4614,8 +4614,31 @@ a.th {
 .topbg, .middlebg, .bottombg {
   width: 100%; }
 
+h1 {
+  font-weight: 200;
+  color: white;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle; }
+
+#age {
+  padding: 0.45em;
+  height: auto;
+  font-size: 1.2em;
+  font-weight: 200;
+  border-radius: 0.5em;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+  width: 63%;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  margin-left: 1%; }
+
 .topbg {
   background: #40dfcb; }
+
+.middlebg, .bottombg {
+  display: none; }
 
 .middlebg {
   background: #f46; }
@@ -4659,17 +4682,22 @@ a.th {
   box-shadow: 0px 2px 4px 0px #777;
   margin: 2px; }
 
-#race .iradio_square-red {
-  display: inline-block; }
-#race > span {
-  display: block; }
-#race label {
-  display: inline-block;
-  font-size: 1.3em;
-  font-weight: 200;
-  position: relative;
-  bottom: 2px;
-  left: 4px; }
+#race {
+  background: rgba(255, 255, 255, 0.82);
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em; }
+  #race .iradio_square-red {
+    display: inline-block; }
+  #race > span {
+    display: block; }
+  #race label {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: 200;
+    position: relative;
+    bottom: 2px;
+    left: 4px; }
 
 fieldset {
   padding: 2rem;
