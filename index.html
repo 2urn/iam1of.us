@@ -47,12 +47,19 @@
 		</div>
 		<div class="middlebg">
 			<section class="row">
-				<div id="resultUser"></div>
+				<div id="resultUser" class="columns small-12"></div>
 			</section class="row">			
 		</div>
 		<div class="bottombg">
 			<section class="row">
-				<div id="resultTotalPop"></div>
+				<div id="resultTotalPop" class="columns small-12"></div>
+			</section>
+			<section class="row">
+				<div class="gmap columns small-12">
+				</div>
+				<br>
+				<br>
+				<br>
 			</section>
 		</div>
 
@@ -105,7 +112,8 @@
 		  // Expand result divs on click of submit
 		  $('.topbg button').click(function(){
 		  	$('.middlebg').slideDown('fast',function(){
-		  		$('.bottombg').slideDown('fast')
+		  		$('.bottombg').slideDown('fast');
+		  		// $('.gmap').fadeIn('fast');
 		  	})
 		  })
 		});

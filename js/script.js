@@ -93,6 +93,8 @@ $(document).ready(function() {
         getTotalPop();
 
     });
+    
+    $('.gmap').append('<iframe width="425" id="gmap" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q='+returnUserPostal()+'&amp;t=k&amp;ie=UTF8&amp;&amp;output=embed"></iframe>')
 
 });
 
