@@ -4614,12 +4614,22 @@ a.th {
 .topbg, .middlebg, .bottombg {
   width: 100%; }
 
-h1 {
+h1, h2 {
   font-weight: 200;
   color: white;
   display: inline-block;
   margin: 0;
   vertical-align: middle; }
+
+h2 {
+  display: block;
+  text-align: center; }
+
+.share {
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  margin-bottom: 1.5em;
+  padding: 0.5em; }
 
 #age {
   padding: 0.45em;
@@ -4759,10 +4769,10 @@ select {
 #state, #zipCode {
   display: none; }
 
-#gmap {
+.twitter-container {
   margin: 0 auto;
-  display: block;
-  border-radius: 1em; }
+  width: 107px;
+  display: none; }
 
 @media screen and (min-width: 1025px) {
   input, select {

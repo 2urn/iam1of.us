@@ -51,7 +51,7 @@ $(document).ready(function() {
 
         $.getJSON(censusAPI + 'PCT012' + $userRace + $userGender + $userAge + '&for=zip+code+tabulation+area:' + returnUserPostal() +'&in=state:' + returnUserState(), function(data) {
 
-            $resultUser.html('<span>I am one of</span>' + '<div class="count">' + data[1][0] + '</div>' + $('#age').val() + ' ' + 'year old, ' + $('#race .iradio_square-red.checked input').attr('name') + ', ' + ' ' + $('#gender option:selected').text() + 's</span>');
+            $resultUser.html('<span>I am one of</span>' + '<div class="count">' + data[1][0] + '</div>' + '<span class="ageRaceGender">'+$('#age').val() + ' ' + 'year old, ' + $('#race .iradio_square-red.checked input').attr('name') + ', ' + ' ' + $('#gender option:selected').text()+"s"+"</span>" + '</span>');
 
         });
 
@@ -92,10 +92,21 @@ $(document).ready(function() {
         getUserData();
         getTotalPop();
 
+        // Function to add text to custom twitter post.  SetTimeout is so that
+        // it has a few milliseconds to actually get text data from the page
+        setTimeout(function(){
+            var twitterDataText = "I am one of "+$('#resultUser .count').text()+" "+$('#resultUser span').eq(1).text()+" from a total population of "+$('#resultTotalPop .count').text()+" "+$('#resultTotalPop span').eq(1).text();
+            $('.twitter-container').append('<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://iam1of.us" data-text="'+twitterDataText+'" data-size="large">Tweet</a>');
+            $.ajax({
+              url: 'http://platform.twitter.com/widgets.js',
+              dataType: "script",
+              success: console.log("successfully activated twitter button with message:"+twitterDataText)
+            });
+            $('.twitter-container').fadeIn('slow');
+        },800)
+
     });
     
-    $('.gmap').append('<iframe width="425" id="gmap" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q='+returnUserPostal()+'&amp;t=k&amp;ie=UTF8&amp;&amp;output=embed"></iframe>')
-
 });
 
 
